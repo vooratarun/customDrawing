@@ -1,11 +1,13 @@
 package voora.com.customcalc.ui;
 
 import android.graphics.Point;
+import android.graphics.drawable.shapes.RectShape;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 
 import voora.com.customcalc.R;
 
@@ -17,6 +19,9 @@ public class CircularRevealActivity extends AppCompatActivity {
         setContentView(R.layout.activity_circular_reveal);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ((ImageView)findViewById(R.id.ipower))
+                .setImageDrawable(new TextDrawable(new RectShape()));
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(this::startRevealView);

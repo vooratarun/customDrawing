@@ -13,8 +13,15 @@
 
     <voora.com.customcalc.ui.CircularRevealView
         android:id="@+id/revealView"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </voora.com.customcalc.ui.CircularRevealView>
+
+    <ImageView
+        android:id="@+id/ipower"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="15dp" />
 
 </FrameLayout>

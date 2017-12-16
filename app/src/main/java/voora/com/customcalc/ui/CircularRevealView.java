@@ -18,8 +18,6 @@ public class CircularRevealView extends ViewGroup {
     View inkView;
     private static final String TAG = "CircularRevealView";
 
-
-
     public CircularRevealView(Context context) {
         super(context);
         init(context);
@@ -70,6 +68,12 @@ public class CircularRevealView extends ViewGroup {
     }
 
 
+    /**
+     * Method to start the animation..it basically scalesOut the view to reveal.
+     * @param x  required to translate view to new x position
+     * @param y  required to translate view to new y position
+     * @param radius to calculate the initial scale.
+     */
     public void revealView(int x ,int y, int radius) {
 
         float startScale = radius * 2f / inkView.getHeight();
@@ -77,8 +81,10 @@ public class CircularRevealView extends ViewGroup {
 
         Log.d(TAG, String.format("x %d y %d %f ",x,y,startScale));
 
+        // ScaleDown the view
         prepareView(inkView,x,y,startScale);
 
+        //Scale to max to show the view.
         inkView.animate()
             .scaleX(finalScale)
             .scaleY(finalScale)
@@ -87,6 +93,13 @@ public class CircularRevealView extends ViewGroup {
 
     }
 
+    /**
+     * Translate the view to clicked position and scaledown the inkView in viewgroup.
+     * @param view
+     * @param x
+     * @param y
+     * @param startScale
+     */
     private void prepareView(View view ,int x, int y , float startScale) {
 
         int centerX = view.getWidth() /2;
