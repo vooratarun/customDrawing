@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="voora.com.customcalc.main.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/inputBox"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/background_dark"
+        android:textColor="@android:color/white"
+        android:gravity="bottom|end"
+        android:textSize="35sp"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/numberLayout"
+        android:text="0"/>
+
+    <LinearLayout
+        android:id="@+id/numberLayout"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/firstRow"
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            android:layout_below="@+id/inputBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/seven"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/number_box_height"
+                style="@style/numberStyle"
+                android:text="7"/>
+
+            <TextView
+                android:id="@+id/eight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle"
+                android:text="8"/>
+
+            <TextView
+                android:id="@+id/nine"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle"
+                android:text="9"/>
+
+            <TextView
+                android:id="@+id/ce"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.red"
+                android:textColor="@android:color/white"
+                android:text="CE"/>
+
+            <TextView
+                android:id="@+id/cl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.red"
+                android:textColor="@android:color/white"
+                android:text="CL"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            android:id="@+id/secondRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/four"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/number_box_height"
+                style="@style/numberStyle"
+                android:text="4"/>
+
+            <TextView
+                android:id="@+id/five"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle"
+                android:text="5"/>
+
+            <TextView
+                android:id="@+id/six"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle"
+                android:text="6"/>
+
+            <TextView
+                android:id="@+id/modulo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.gray"
+                android:textColor="@android:color/white"
+                android:text="%"/>
+
+            <TextView
+                android:id="@+id/divide"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.gray"
+                android:textColor="@android:color/white"
+                android:text="/"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            android:id="@+id/thirdRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/number_box_height"
+                style="@style/numberStyle"
+                android:text="1"/>
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle"
+                android:text="2"/>
+
+            <TextView
+                android:id="@+id/three"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle"
+                android:text="3"/>
+
+            <TextView
+                android:id="@+id/power"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.gray"
+                android:textColor="@android:color/white"
+                android:text="^"/>
+
+            <TextView
+                android:id="@+id/multiply"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.gray"
+                android:textColor="@android:color/white"
+                android:text="*"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            android:id="@+id/fourthRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/zero"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="@dimen/number_box_height"
+                style="@style/numberStyle"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/point"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle"
+                android:text="."/>
+
+            <TextView
+                android:id="@+id/subtract"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.gray"
+                android:textColor="@android:color/white"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                style="@style/numberStyle.gray"
+                android:textColor="@android:color/white"
+                android:text="+"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            android:id="@+id/fifthRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/equals"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/number_box_height"
+                style="@style/numberStyle"
+                android:text="="/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
