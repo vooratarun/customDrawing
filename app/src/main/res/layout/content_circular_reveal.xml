@@ -18,10 +18,27 @@
         android:layout_height="match_parent">
     </voora.com.customcalc.ui.CircularRevealView>
 
+
     <ImageView
         android:id="@+id/ipower"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="15dp" />
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <voora.com.customcalc.ui.CircleImage
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
+
+        <ImageView
+            android:src="@android:drawable/btn_minus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </FrameLayout>
 
 </FrameLayout>
