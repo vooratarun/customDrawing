@@ -9,10 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
-import voora.com.customcalc.R;
 import voora.com.customcalc.ui.BgRevealView;
 import voora.com.customcalc.ui.CircularRevealView;
-import voora.com.customcalc.ui.TextDrawable;
+import voora.com.customcalc.drawable.TextDrawable;
 
 public class CircularRevealActivity extends AppCompatActivity {
 

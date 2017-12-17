@@ -13,9 +13,9 @@
 
     <voora.com.customcalc.ui.CircularRevealView
         android:id="@+id/revealView"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
     </voora.com.customcalc.ui.CircularRevealView>
 
     <voora.com.customcalc.ui.BgRevealView
@@ -24,36 +24,37 @@
         android:layout_height="match_parent"/>
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" button "/>
-
     <ImageView
-        android:visibility="gone"
         android:id="@+id/ipower"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_margin="15dp" />
+        android:layout_margin="15dp"
+        android:visibility="gone"/>
 
 
     <FrameLayout
-        android:visibility="gone"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
         <voora.com.customcalc.ui.CircleImage
             android:layout_width="70dp"
             android:layout_height="70dp"/>
 
         <ImageView
-            android:src="@android:drawable/btn_minus"
             android:layout_width="50dp"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            android:src="@android:drawable/btn_minus"/>
 
     </FrameLayout>
 
 
-
+    <voora.com.customcalc.drawable.BorderImageView
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="5dp"
+        android:contentDescription="no"/>
 
 </FrameLayout>
