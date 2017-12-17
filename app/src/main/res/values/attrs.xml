@@ -13,4 +13,16 @@
         <attr name="drawableEnd" format="reference"/>
         <attr name="drawableBottom" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="OkulusImageView">
+        <attr name="okulus_cornerRadius" format="dimension"/>
+        <attr name="okulus_borderWidth" format="dimension"/>
+        <attr name="okulus_borderColor" format="color"/>
+        <attr name="okulus_fullCircle" format="boolean"/>
+        <attr name="okulus_shadowWidth" format="dimension"/>
+        <attr name="okulus_shadowColor" format="color"/>
+        <attr name="okulus_touchSelectorColor" format="color"/>
+        <attr name="okulus_touchSelectorEnabled" format="boolean"/>
+    </declare-styleable>
+
 </resources>

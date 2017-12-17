@@ -19,7 +19,7 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name=".ui.CircularRevealActivity"
+            android:name=".CircularRevealActivity"
             android:label="@string/title_activity_circular_reveal"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

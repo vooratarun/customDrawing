@@ -1,4 +1,4 @@
-package voora.com.customcalc.ui;
+package voora.com.customcalc;
 
 import android.graphics.Point;
 import android.graphics.drawable.shapes.RectShape;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 import voora.com.customcalc.R;
+import voora.com.customcalc.ui.BgRevealView;
+import voora.com.customcalc.ui.CircularRevealView;
+import voora.com.customcalc.ui.TextDrawable;
 
 public class CircularRevealActivity extends AppCompatActivity {
 
@@ -31,12 +34,17 @@ public class CircularRevealActivity extends AppCompatActivity {
 
         CircularRevealView revealView = findViewById(R.id.revealView);
 
-        int[] outLocation = new int[2];
-        view.getLocationOnScreen(outLocation);
+        int[] startingLocation = new int[2];
+        view.getLocationOnScreen(startingLocation);
+        startingLocation[0] += view.getWidth() / 2;
 
-        Point point = new Point(outLocation[0],outLocation[1]);
-        revealView.revealView(point.x,point.y,view.getWidth()/2);
 
+        Point point = new Point(startingLocation[0],startingLocation[1]);
+        //revealView.revealView(point.x,point.y,view.getWidth()/2);
+
+
+        BgRevealView bgRevealView = findViewById(R.id.bgRevealView);
+        bgRevealView.startFromLocation(startingLocation);
 
     }
 }
